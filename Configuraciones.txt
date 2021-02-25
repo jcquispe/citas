@@ -1,0 +1,19 @@
+REACT NATIVE
+
+ANDROID
+Problems compiling to Android
+
+1: Create a directory in android/app/src/main/assets
+2: Rename index.android.js (in root directory) to index.js (Maybe there is an index.js file in which case you do not need to rename it) 
+3. Run the following command:
+npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+4: Build your APK: react-native run-android
+
+
+iOS
+Problems compiling to iOS
+
+1: In the ios/Podfile replace 
+use_flipper!({ 'Flipper-Folly' => '2.3.0' })
+
+
